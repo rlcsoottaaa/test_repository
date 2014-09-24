@@ -21,23 +21,4 @@
 				});
 			}
 
-			// Common product management
-			if (!customizationId)
-			{
-				//retrieve idProduct and idCombination from the displayed product in the block cart
-				alert('firstCut');
-				var firstCut = $(this).parent().parent().parent().attr('id').replace('cart_block_product_', '');
-				firstCut = firstCut.replace('deleteCustomizableProduct_', '');
-				ids = firstCut.split('_');
-				productId = parseInt(ids[0]);
-				if (typeof(ids[1]) != 'undefined')
-					productAttributeId = parseInt(ids[1]);
-			}
-
-			var idAddressDelivery = $(this).parent().parent().attr('id').match(/.*_\d+_\d+_(\d+)/)[1];
-
-			// Removing product from the cart
-			alert('before remove');
-			ajaxCart.remove(productId, productAttributeId, customizationId, idAddressDelivery);
-			alert('after remove');
-			return false;*/
+		
